@@ -1,0 +1,27 @@
+{
+  "name": "quick-template",
+  "version": "0.0.0",
+  "description": "Quickly create project templates to support the required repositories as much as possible",
+  "main": "index.js",
+  "bin":{
+    "quick-template":"index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ys-OoO/quick-template.git"
+  },
+  "keywords": [
+    "quick",
+    "template",
+    "generate-template"
+  ],
+  "author": "https://github.com/Ys-OoO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ys-OoO/quick-template/issues"
+  },
+  "homepage": "https://github.com/Ys-OoO/quick-template#readme"
+}
