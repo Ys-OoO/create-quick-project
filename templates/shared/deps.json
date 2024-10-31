@@ -1,0 +1,8 @@
+{
+    "vite":["vite"],
+    "vue":[{
+        "notDev":["vue"]
+    },"eslint-plugin-vue","@vitejs/plugin-vue"],
+    "eslint":["eslint","@eslint/js","eslint-config-prettier","eslint-plugin-prettier","globals"],
+    "prettier":["prettier"]
+}
