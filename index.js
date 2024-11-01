@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 import pareseArgs from "minimist";
 import prompts from "prompts";
+import fs from 'fs';
+import path from 'path';
 
 const argv = pareseArgs(process.argv.slice(2));
-const cwd = process.cwd();
+const currentDir = process.cwd();
 
 async function main() {
   const defaultTemplate = "vite-vue";
@@ -17,15 +19,37 @@ async function main() {
         message: "Project name:",
         initial: defaultTemplate,
       },
-    ]);
+    ],{
+		onCancel:()=>{
+			throw new Error("Operation cancelled!");
+		}
+	});
   } catch (error) {
     console.log(error.message);
     return;
   }
+  // remove files
+  // emptyDir(currentDir);
+
+
+  const {
+	projectName,
+	framework,
+  } = result;
+  console.log(result)
 }
 
-function formatDir(targetDir) {
-  return targetDir?.trim().replace(/\/+$/g, "");
+function emptyDir(dir){
+	if(!fs.existsSync(dir)){
+		return;
+	}
+	for(const filePath of fs.readdirSync(dir)){
+		fs.rmSync(path.resolve(dir,filePath),{recursive:true,force:true});
+	}
+}
+
+function getTemplate(templateName){
+
 }
 
 main();
