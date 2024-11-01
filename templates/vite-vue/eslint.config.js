@@ -20,6 +20,17 @@ export default [
   ...pluginVue.configs['flat/essential'],
   {
     /** add custom rules here */
+    rules: {
+      'no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          args: 'after-used',
+          varsIgnorePattern: '^_',
+          argsIgnorePattern: '^_',
+        },
+      ],
+    },
   },
   eslintPluginPrettierRecommended,
 ];

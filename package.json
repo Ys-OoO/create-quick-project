@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "description": "Quickly create project templates to support the required repositories as much as possible",
   "main": "index.js",
-  "bin":{
-    "quick-template":"index.js"
+  "bin": {
+    "quick-template": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./index.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ys-OoO/quick-template.git"
@@ -23,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/Ys-OoO/quick-template/issues"
   },
-  "homepage": "https://github.com/Ys-OoO/quick-template#readme"
+  "homepage": "https://github.com/Ys-OoO/quick-template#readme",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2"
+  }
 }
