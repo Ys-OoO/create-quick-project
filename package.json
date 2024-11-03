@@ -1,10 +1,10 @@
 {
-  "name": "quick-project",
+  "name": "create-quick-project",
   "version": "0.0.0",
   "description": "Quickly create project templates to support the required repositories as much as possible",
   "main": "index.js",
   "bin": {
-    "quick-project": "index.js"
+    "create-quick-project": "index.js"
   },
   "scripts": {
     "test": "node ./index.js"
@@ -22,9 +22,9 @@
   "author": "https://github.com/Ys-OoO",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ys-OoO/quick-project/issues"
+    "url": "https://github.com/Ys-OoO/create-quick-project/issues"
   },
-  "homepage": "https://github.com/Ys-OoO/quick-project#readme",
+  "homepage": "https://github.com/Ys-OoO/create-quick-project#readme",
   "dependencies": {
     "minimist": "^1.2.8",
     "prompts": "^2.4.2"
