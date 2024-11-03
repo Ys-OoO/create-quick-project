@@ -24,19 +24,19 @@ async function main() {
 			throw new Error("Operation cancelled!");
 		}
 	});
-  } catch (error) {
-    console.log(error.message);
+  } catch (cancelled) {
+    console.log(cancelled.message);
     return;
   }
   // remove files
   // emptyDir(currentDir);
 
-
   const {
 	projectName,
 	framework,
   } = result;
-  console.log(result)
+  
+  console.log(projectName,import.meta.url);
 }
 
 function emptyDir(dir){
@@ -46,10 +46,6 @@ function emptyDir(dir){
 	for(const filePath of fs.readdirSync(dir)){
 		fs.rmSync(path.resolve(dir,filePath),{recursive:true,force:true});
 	}
-}
-
-function getTemplate(templateName){
-
 }
 
 main();
