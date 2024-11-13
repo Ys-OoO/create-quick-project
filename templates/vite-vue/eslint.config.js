@@ -12,12 +12,18 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
         /** add global variables here */
       },
     },
   },
   pluginJs.configs.recommended,
   ...pluginVue.configs['flat/essential'],
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
   {
     /** add custom rules here */
     rules: {

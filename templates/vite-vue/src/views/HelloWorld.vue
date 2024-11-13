@@ -1,17 +1,21 @@
 <script setup>
-import { ref } from 'vue'
-
+import { useRootStore } from '../stores/index.js';
+const rootStore = useRootStore();
 defineProps({
   msg: String,
-})
+});
 
-const count = ref(0)
+function addCount() {
+  rootStore.count++;
+}
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
   <div class="container">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="addCount">
+      count is {{ rootStore.count }}
+    </button>
   </div>
 </template>
 
